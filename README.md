@@ -46,7 +46,7 @@ ScrapeUOL/
 
 ## Contribuição
 
-Contribuições são bem-vindas! Se quiser sugerir melhorias ou corrigir problemas, abra uma [issue](https://github.com/caioreis29974/ScrapeUOL/issues) ou envie um [pull request](https://github.com/caioreis29974/ScrapeUOL/pulls).
+Contribuições são bem-vindas! Se voce quiser sugerir melhorias ou corrigir problemas, abra uma [issue](https://github.com/caioreis29974/ScrapeUOL/issues) ou envie um [pull request](https://github.com/caioreis29974/ScrapeUOL/pulls).
 
 ## Licença
 
