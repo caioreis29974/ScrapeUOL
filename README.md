@@ -1,9 +1,7 @@
 # ScrapeUOL
-
 ScrapeUOL é um projeto de web scraping que coleta os títulos das notícias do site [UOL Notícias](https://noticias.uol.com.br) e permite salvá-los em um arquivo de texto.
 
 ## Requisitos
-
 Antes de executar o projeto, certifique-se de ter o Python instalado em sua máquina e as dependências necessárias. Para instalá-las, utilize o seguinte comando:
 
 ```
