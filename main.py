@@ -35,7 +35,8 @@ print(f"\n\n{news}\n\n{main}")
 
 resp = input("Do you want to save this news? [Y/N] ").upper()
 if resp == 'Y':
-    news.to_csv('news.txt', index=False, sep='\t')
+    all_news = pd.concat([main, news], axis=0)
+    all_news.to_csv('news.txt', index=False, sep='\t')
     print("File 'news.txt' created successfully!")
 else:
     print("Unsaved news. The program will be terminated.")
