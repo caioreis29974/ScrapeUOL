@@ -20,13 +20,11 @@ main_titles = [
 main_new = list({title for title in main_titles if title.strip()}) or ["Main title not found"]
 
 pd.set_option('display.max_colwidth', 100)
-news = pd.DataFrame({
-    'NEWS': text
-})
+news = pd.DataFrame({'NEWS': text})
+main = pd.DataFrame({'MAIN_NEW': main_new})
 
-pd.set_option('display.max_colwidth', 100)
-main = pd.DataFrame({
-    'MAIN NEW': main_new
+all_news = pd.DataFrame({
+    'NEWS': main['MAIN_NEW'].tolist() + news['NEWS'].tolist()
 })
 
 print("Loading News...", end='\r')
@@ -35,8 +33,7 @@ print(f"\n\n{news}\n\n{main}")
 
 resp = input("Do you want to save this news? [Y/N] ").upper()
 if resp == 'Y':
-    all_news = pd.concat([main, news], axis=0)
-    all_news.to_csv('news.txt', index=False, sep='\t')
+    all_news.to_csv('news.txt', index=False, sep='\t', encoding='utf-8')
     print("File 'news.txt' created successfully!")
 else:
     print("Unsaved news. The program will be terminated.")
