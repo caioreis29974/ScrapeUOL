@@ -33,7 +33,13 @@ print(f"\n\n{news}\n\n{main}")
 
 resp = input("Do you want to save this news? [Y/N] ").upper()
 if resp == 'Y':
-    all_news.to_csv('news.txt', index=False, sep='\t', encoding='utf-8')
+    with open('news.txt', 'w', encoding='utf-8') as f:
+        f.write("NEWS\n")
+        f.write("\n".join(news['NEWS'].tolist()))
+        f.write("\n\n")
+        f.write("MAIN NEWS\n")
+        f.write("\n".join(main['MAIN_NEW'].tolist()))
+    
     print("File 'news.txt' created successfully!")
 else:
     print("Unsaved news. The program will be terminated.")
