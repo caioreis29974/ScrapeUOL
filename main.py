@@ -21,10 +21,10 @@ main_new = list({title for title in main_titles if title.strip()}) or ["Main tit
 
 pd.set_option('display.max_colwidth', 100)
 news = pd.DataFrame({'NEWS': text})
-main = pd.DataFrame({'MAIN_NEW': main_new})
+main = pd.DataFrame({'MAIN_NEWS': main_new})
 
 all_news = pd.DataFrame({
-    'NEWS': main['MAIN_NEW'].tolist() + news['NEWS'].tolist()
+    'NEWS': main['MAIN_NEWS'].tolist() + news['NEWS'].tolist()
 })
 
 print("Loading News...", end='\r')
@@ -38,7 +38,7 @@ if resp == 'Y':
         f.write("\n".join(news['NEWS'].tolist()))
         f.write("\n\n")
         f.write("MAIN NEWS\n")
-        f.write("\n".join(main['MAIN_NEW'].tolist()))
+        f.write("\n".join(main['MAIN_NEWS'].tolist()))
     
     print("File 'news.txt' created successfully!")
 else:
